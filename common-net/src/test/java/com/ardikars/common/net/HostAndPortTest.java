@@ -3,7 +3,7 @@ package com.ardikars.common.net;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class HostTest extends BaseTest {
+public class HostAndPortTest extends BaseTest {
 
     private static final String PREFIX = "https://";
     private static final String HOST_NAME = "ardikars.com";
@@ -12,13 +12,13 @@ public class HostTest extends BaseTest {
     private static final int PORT = 8080;
 
 
-    private static final Host IPV4_HOST = Host.builder()
+    private static final HostAndPort IPV4_HOST = HostAndPort.builder()
             .hostName(HOST_NAME)
             .port(PORT)
             .address(INET_4_ADDRESS)
             .build();
 
-    private static final Host IPV6_HOST = Host.builder()
+    private static final HostAndPort IPV6_HOST = HostAndPort.builder()
             .hostName(HOST_NAME)
             .port(PORT)
             .address(INET_6_ADDRESS)

@@ -1,5 +1,11 @@
 package com.ardikars.common.util;
 
+import com.ardikars.common.util.DateTimePattern.DatePattern;
+import com.ardikars.common.util.DateTimePattern.TimePattern;
+import java.text.Format;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
@@ -13,7 +19,16 @@ public class BaseTest {
 
     @Test
     public void doNoting() {
-        // do noting
+        DateTimeFormatter formatter
+                = DateTimeFormatter.ofPattern(
+                        DateTimePattern.builder()
+                            .datePattern(DatePattern.DD_MM_YYYY_WITH_MINUS_AS_DELIMITER)
+                            .timePattern(TimePattern.HH_MM_SS_WITH_COLON_AS_DELIMITER)
+                                .timeBeforeDate(true)
+                            .build().getPattern()
+        );
+        Format format = formatter.toFormat();
+        System.out.println(format.format(ZonedDateTime.now()));
     }
 
 }

@@ -17,11 +17,11 @@ ext {
 	JAVA_VERSION = '1.8'
 	JUNIT_VERSION = '4.12'
 	MOCKITO_VERSION = '2.13.0'
-	GRADLE_VERSION = '3.5'
+	GRADLE_VERSION = '4.0'
 
-	CHECKSTYLE_VERSION = '6.18'
-    FINDBUGS_VERSION = '3.0.1'
-    PMD_VERION = '4.3'
+	CHECKSTYLE_VERSION = '8.10.1'
+    SPOTBUGS_VERSION = '3.1.5'
+    PMD_VERION = '6.5.0'
 
 	LICENSE_NAME = 'Apache License, Version 2.0'
 	LICENSE_URL = 'http://www.apache.org/licenses/LICENSE-2.0.html'
